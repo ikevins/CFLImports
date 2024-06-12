@@ -20,7 +20,7 @@ body::-webkit-scrollbar{
     left: 0px;
     width: 100%;
     height: auto;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255);
     z-index: 10;
     padding: 20px 0;
     display: flex;
@@ -29,7 +29,7 @@ body::-webkit-scrollbar{
 }
 
 .navigationBar a {
-    color: darkgrey;
+    color: black;
     text-align: center;
     padding: 0px 40px;
     text-decoration: none;
@@ -51,43 +51,27 @@ body::-webkit-scrollbar{
 }
 
 #home {
-    background-color: white;
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: auto;
-  }
-
-.homeContainer {
-    width: 100%;
-    position: absolute;
-    top: calc(45% + 10px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1; 
-    color: white;
 }
 
-.homeImageContainer {
-    position: relative;
+#home img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
 }
 
 .homeImageOverlay {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.35);
+    background-color: rgb(0, 0, 0, 0.5);
     z-index: 1;
-}
-
-.homeImageContainer img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 .textOverlay {
@@ -116,13 +100,16 @@ body::-webkit-scrollbar{
 
 .ourPromise {
     position: absolute;
-    top: 43%;
+    top: 75%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 50%;
-    height: auto;
-    margin-top: 18%;
-    z-index: 12000;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
 .ourPromise h1 {
@@ -138,28 +125,66 @@ body::-webkit-scrollbar{
 }
 
 .ourPromise .ourPromiseSecondParagraph {
-    color: black;
+    color: white;
     font-size: 2em;
     margin: 0;
 }
 
-.scroll-down-arrow {
+.scrollButton {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-decoration: none;
+    height: 4em;
+    width: 2em;
+    border: 0.3em solid rgb(255, 255, 255);
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 3em;
+    border-radius: 5em;
+    z-index: 2;
 }
 
-.scroll-down-arrow::after {
-    content: '';
+.scrollButton:before {
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0.25em;
+    height: 1.25em;
+    width: 1.25em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: move-down 1.5s infinite;
+}
+
+@keyframes move-down {
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+      }
+    75% {
+      opacity: 0.25;
+    }
+    100% {
+      transform: translateY(5.5em);
+      opacity: 0;
+    }
+}
+
+.scrollButton:after {
+    position: absolute;
+    width: 12em;
     display: block;
-    width: 20px;
-    height: 20px;
-    border: solid #000;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    margin: 0 auto;
+    width: 12em;
+    text-align: center;
+    left: -4.2em;
+    bottom: -2.5em;
+    font-size: 1.6em;
+    color: #ffffff;
+    letter-spacing: 3px;
+    font-weight: 600;
 }
 
 #about {
@@ -218,6 +243,27 @@ body::-webkit-scrollbar{
 
 @media (max-width: 1440px) {
     .textOverlay h1 {
+        font-size: 4.5em; /* Further decrease font size for smaller screens */
+    }
+
+    .textOverlay p {
+        font-size: 2.5em; /* Further decrease font size for smaller screens */
+    }
+    .ourPromise h1 {
+        font-size: 3.5em; /* Further decrease font size for smaller screens */
+    }
+
+    .ourPromise .ourPromiseFirstParagraph {
+        font-size: 1.5em; /* Further decrease font size for smaller screens */
+    }
+    
+    .ourPromise .ourPromiseSecondParagraph {
+        font-size: 1.5em; /* Further decrease font size for smaller screens */
+    }
+}
+
+@media (max-width: 1020px) {
+    .textOverlay h1 {
         font-size: 4em; /* Further decrease font size for smaller screens */
     }
 
@@ -237,7 +283,7 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 428px) {
     .textOverlay h1 {
         font-size: 3.5em; /* Further decrease font size for smaller screens */
     }
@@ -250,10 +296,10 @@ body::-webkit-scrollbar{
     }
 
     .ourPromise .ourPromiseFirstParagraph {
-        font-size: 0.5em; /* Further decrease font size for smaller screens */
+        font-size: 0.75em; /* Further decrease font size for smaller screens */
     }
     
     .ourPromise .ourPromiseSecondParagraph {
-        font-size: 0.5em; /* Further decrease font size for smaller screens */
+        font-size: 0.75em; /* Further decrease font size for smaller screens */
     }
 }
