@@ -88,7 +88,7 @@ body::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
 }
 
 .textOverlay h1 {
@@ -289,19 +289,6 @@ body::-webkit-scrollbar{
     padding: 20px;
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-    .servicesGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .servicesGrid {
-        grid-template-columns: 1fr;
-    }
-}
-
 #about {
     background-color: rgb(255, 255, 255);
     position: relative;
@@ -416,65 +403,174 @@ button[type="submit"]:hover {
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width: 1648px) {
+    .navigationBar a {
+        font-size: 1.75em;
+    }
+
     .textOverlay h1 {
-        font-size: 4.5em; /* Further decrease font size for smaller screens */
+        font-size: 4.5em;
     }
 
     .textOverlay p {
-        font-size: 2.5em; /* Further decrease font size for smaller screens */
+        font-size: 2.5em;
     }
     .ourPromise h1 {
-        font-size: 3.5em; /* Further decrease font size for smaller screens */
+        font-size: 3.5em;
     }
 
     .ourPromise .ourPromiseFirstParagraph {
-        font-size: 1.5em; /* Further decrease font size for smaller screens */
+        font-size: 1.5em;
     }
     
     .ourPromise .ourPromiseSecondParagraph {
-        font-size: 1.5em; /* Further decrease font size for smaller screens */
+        font-size: 1.5em;
+    }
+
+    .servicesGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .serviceTile {
+        height: 18em;
+        width: 18em;
+    }
+
+    .serviceTile h3 {
+        font-size: 2.5em;
+    }
+
+    .serviceDescription p {
+        font-size: 1em;
     }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1278px) {
+    .navigationBar a {
+        font-size: 1.5em;
+    }
+    
     .textOverlay h1 {
-        font-size: 4em; /* Further decrease font size for smaller screens */
+        font-size: 3.5em;
     }
 
     .textOverlay p {
-        font-size: 2em; /* Further decrease font size for smaller screens */
+        font-size: 1.75em;
     }
     .ourPromise h1 {
-        font-size: 3em; /* Further decrease font size for smaller screens */
+        font-size: 3em;
     }
 
     .ourPromise .ourPromiseFirstParagraph {
-        font-size: 1em; /* Further decrease font size for smaller screens */
+        font-size: 1.5em;
     }
     
     .ourPromise .ourPromiseSecondParagraph {
-        font-size: 1em; /* Further decrease font size for smaller screens */
+        font-size: 1.5em;
+    }
+
+    .servicesGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .serviceTile {
+        height: 12em;
+        width: 12em;
+    }
+
+    .serviceTile h3 {
+        font-size: 1.5em;
+    }
+
+    .serviceDescription p {
+        font-size: 0.75em;
     }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 768px) {
+    .navigationBar a {
+        font-size: 1em;
+        padding: 0px 20px;
+    }
+
     .textOverlay h1 {
-        font-size: 3.5em; /* Further decrease font size for smaller screens */
+        font-size: 3em;
     }
 
     .textOverlay p {
-        font-size: 1.5em; /* Further decrease font size for smaller screens */
+        font-size: 1.5em;
     }
+
     .ourPromise h1 {
-        font-size: 2.5em; /* Further decrease font size for smaller screens */
+        font-size: 2.5em;
     }
 
     .ourPromise .ourPromiseFirstParagraph {
-        font-size: 0.75em; /* Further decrease font size for smaller screens */
+        font-size: 1em;
     }
     
     .ourPromise .ourPromiseSecondParagraph {
-        font-size: 0.75em; /* Further decrease font size for smaller screens */
+        font-size: 1em;
+    }
+
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .serviceTile {
+        height: 10em;
+        width: 10em;
+    }
+
+    .serviceTile h3 {
+        font-size: 1.25em;
+    }
+
+    .serviceDescription p {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 482px) {
+    .navigationBar a {
+        font-size: 0.75em; 
+        padding: 0px 10px; 
+    }
+
+    .textOverlay h1 {
+        font-size: 2.25em;
+    }
+
+    .textOverlay p {
+        font-size: 1.25em;
+    }
+
+    .ourPromise h1 {
+        font-size: 1.75em;
+    }
+
+    .ourPromise .ourPromiseFirstParagraph {
+        font-size: 0.75em;
+    }
+    
+    .ourPromise .ourPromiseSecondParagraph {
+        font-size: 0.75em;
+    }
+
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .serviceTile {
+        height: 8em;
+        width: 8em;
+    }
+
+    .serviceTile h3 {
+        font-size: 1em;
+    }
+
+    .serviceDescription p {
+        font-size: 0.35em;
     }
 }
