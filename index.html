@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Florida Import Specialists</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
 </head>
 <body>
     <div class="navigationBar">
@@ -36,106 +37,121 @@
 <section id="services" class="content-section">
     <div class="servicesContainer">
         <div class="servicesGrid">
-            <div class="serviceTile">
+            <div class="serviceTile" data-modal="generalMaintenanceModal">
                 <div class="serviceTileOverlay"></div>
                 <img src="assets/GeneralMaintenance.png">
                 <h3>General Maintenance</h3>
-                <div class="serviceDescription">
-                    <p>
-                        General maintenance is crucial for keeping vehicles running smoothly 
-                        and extending their lifespan. Tasks such as regular oil changes, tire rotations, 
-                        and fluid checks help prevent costly repairs and ensure optimal performance and safety on the road.
-                    </p>
-                </div>
             </div>
-            <div class="serviceTile">
+            <div class="serviceModal" id="generalMaintenanceModal">
+                <span class="closeButton">&times;</span>
+                <h3>General Maintenance</h3>
+                <p>
+                    General maintenance is crucial for keeping vehicles running smoothly and extending their lifespan. 
+                    Tasks such as regular oil changes, tire rotations, and fluid checks help prevent costly repairs 
+                    and ensure optimal performance and safety on the road.
+                </p>
+            </div>
+            <div class="serviceTile" data-modal="engineTransmissionModal">
                 <div class="serviceTileOverlay"></div>
                 <img src="assets/EngineRepair.png">
                 <h3>Engine & Transmission</h3>
-                <div class="serviceDescription">
-                    <p>
-                        Engine and transmission repair are critical aspects of vehicle maintenance, 
-                        addressing complex systems that power and regulate performance. Proper maintenance, 
-                        and diagnostics can prevent major failures, ensuring reliability and longevity of these 
-                        essential components in your vehicle.
-                    </p>
-                </div>
             </div>
-            <div class="serviceTile">
+            <div class="serviceModal" id="engineTransmissionModal">
+                    <span class="closeButton">&times;</span>
+                    <h3>Engine & Transmission</h3>
+                    <p>
+                        Engine and transmission repair are critical aspects of vehicle maintenance, addressing complex 
+                        systems that power and regulate performance. Proper maintenance, and diagnostics can prevent major 
+                        failures, ensuring reliability and longevity of these essential components in your vehicle.
+                    </p>
+            </div>
+            <div class="serviceTile" data-modal="electricalModal">
                 <div class="serviceTileOverlay"></div>
                 <img src="assets/ElectricalRepair.png">
                 <h3>Electrical</h3>
-                <div class="serviceDescription">
-                    <p>
-                        Electrical repair involves troubleshooting and fixing issues related to wiring, circuits, 
-                        and components such as batteries and alternators. Skilled technicians use diagnostic tools to pinpoint faults, 
-                        ensuring that electrical systems operate correctly, which is essential for vehicle functionality and safety.
-                    </p>
-                </div>
             </div>
-            <div class="serviceTile">
+            <div class="serviceModal" id="electricalModal">
+                <span class="closeButton">&times;</span>
+                <h3>Electrical</h3>
+                <p>
+                    Electrical repair involves troubleshooting and fixing issues related to wiring, circuits, and components 
+                    such as batteries and alternators. Skilled technicians use diagnostic tools to pinpoint faults, that 
+                    electrical systems operate correctly, which is essential for vehicle functionality and safety.
+                </p>
+            </div>
+            <div class="serviceTile" data-modal="brakeModal">
                 <div class="serviceTileOverlay"></div>
                 <img src="assets/BrakeRepair.png">
                 <h3>Brakes</h3>
-                <div class="serviceDescription">
-                    <p>
-                        Brake repair is essential for maintaining safe stopping distances and vehicle control. 
-                        It typically involves replacing worn brake pads, inspecting rotors for damage, and ensuring proper 
-                        functioning of brake calipers and fluid levels. Regular brake inspections and timely repairs not only 
-                        enhance safety but also prevent more extensive and costly damage to braking systems.
-                    </p>
-                </div>
             </div>
-            <div class="serviceTile">
+            <div class="serviceModal" id="brakeModal">
+                <span class="closeButton">&times;</span>
+                <h3>Brakes</h3>
+                <p>
+                    Brake repair is essential for maintaining safe stopping distances and vehicle control. It typically involves 
+                    replacing worn brake pads, inspecting rotors for damage, and ensuring proper functioning of brake calipers 
+                    and fluid levels. Regular brake inspections and timely repairs not only enhance safety but also prevent more 
+                    extensive and costly damage to braking systems.
+                </p>
+            </div>
+            <div class="serviceTile" data-modal="acModal">
                 <div class="serviceTileOverlay"></div>
                 <img src="assets/ACRepair.png">
                 <h3>Air Conditioning</h3>
-                <div class="serviceDescription">
-                    <p>
-                        A/C repair involves diagnosing and fixing issues that affect the performance of a vehicle's air conditioning system. 
-                        This includes identifying leaks, replacing faulty components like compressors or condensers, 
-                        and recharging refrigerant levels to ensure efficient cooling. 
-                        Proper maintenance of the A/C system is crucial for driver comfort and can prevent more costly repairs in the long term.
-                    </p>
-                </div>
             </div>
-            <div class="serviceTile">
+            <div class="serviceModal" id="acModal">
+                <span class="closeButton">&times;</span>
+                <h3>Air Conditioning</h3>
+                <p>
+                    A/C repair involves diagnosing and fixing issues that affect the performance of a vehicle's air conditioning 
+                    system. This includes identifying leaks, replacing faulty components like compressors or condensers, and 
+                    recharging refrigerant levels to ensure efficient cooling. Proper maintenance of the A/C system is crucial 
+                    for driver comfort and can prevent more costly repairs in the long term.
+                </p>
+            </div>
+            <div class="serviceTile" data-modal="suspensionModal">
                 <div class="serviceTileOverlay"></div>
                 <img src="assets/SuspensionRepair.png">
                 <h3>Steering & Suspension</h3>
-                <div class="serviceDescription">
-                    <p>
-                        Steering and suspension repair focuses on maintaining stability, control, and comfort while driving. 
-                        This includes diagnosing and replacing worn-out components like ball joints, tie rods, shocks, 
-                        and struts to ensure smooth handling and responsiveness. Regular inspections and timely repairs 
-                        are crucial for ensuring vehicle safety and minimizing wear on tires and other critical components.
-                    </p>
-                </div>
             </div>
-            <div class="serviceTile">
+            <div class="serviceModal" id="suspensionModal">
+                <span class="closeButton">&times;</span>
+                <h3>Steering & Suspension</h3>
+                <p>
+                    Steering and suspension repair focuses on maintaining stability, control, and comfort while driving. 
+                    This includes diagnosing and replacing worn-out components like ball joints, tie rods, shocks, and struts 
+                    to ensure smooth handling and responsiveness. Regular inspections and timely repairs are crucial for ensuring 
+                    vehicle safety and minimizing wear on tires and other critical components.
+                </p>
+            </div>
+            <div class="serviceTile" data-modal="wheelsTiresModal">
                 <div class="serviceTileOverlay"></div>
                 <img src="assets/WheelsAndTires.png">
                 <h3>Wheels & Tires</h3>
-                <div class="serviceDescription">
-                    <p>
-                        Proper care of wheels and tires is essential for vehicle safety and performance. 
-                        Regular maintenance includes checking tire pressure, rotating tires to ensure even wear, 
-                        and inspecting for signs of damage or tread depth. These practices not only enhance handling 
-                        and fuel efficiency but also extend the lifespan of tires, ensuring a smoother and safer driving experience.
-                    </p>
-                </div>
             </div>
-            <div class="serviceTile">
+            <div class="serviceModal" id="wheelsTiresModal">
+                <span class="closeButton">&times;</span>
+                <h3>Wheels & Tires</h3>
+                <p>
+                    Proper care of wheels and tires is essential for vehicle safety and performance. Regular maintenance includes 
+                    checking tire pressure, rotating tires to ensure even wear, and inspecting for signs of damage or tread depth. 
+                    These practices not only enhance handling and fuel efficiency but also extend the lifespan of tires, ensuring a 
+                    smoother and safer driving experience.
+                </p>
+            </div>
+            <div class="serviceTile" data-modal="aftermarketModal">
                 <div class="serviceTileOverlay"></div>
-                <img src="assets/AftermarketAcessory.png" alt="Service 8">
+                <img src="assets/AftermarketAcessory.png">
                 <h3>Aftermarket Accessories</h3>
-                <div class="serviceDescription">
-                    <p>
-                        Installing aftermarket accessories involves adding custom or performance parts to a vehicle, 
-                        requiring careful consideration of compatibility and professional installation to ensure optimal 
-                        performance and adherence to warranty and regulatory guidelines.
-                    </p>
-                </div>
+            </div>
+            <div class="serviceModal" id="aftermarketModal">
+                <span class="closeButton">&times;</span>
+                <h3>Aftermarket Accessories</h3>
+                <p>
+                    Installing aftermarket accessories involves adding custom or performance parts to a vehicle, requiring careful 
+                    consideration of compatibility and professional installation to ensure optimal performance and adherence to 
+                    warranty and regulatory guidelines.
+                </p>
             </div>
         </div>
     </div>
@@ -168,16 +184,16 @@
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label for="carYear">Year:</label>
-                    <input type="text" id="carYear" name="carYear" required>
+                    <label for="vehicleYear">Year:</label>
+                    <input type="text" id="vehicleYear" name="vehicleYear" required>
                 </div>
                 <div class="form-group">
-                    <label for="carMake">Make:</label>
-                    <input type="text" id="carMake" name="carMake" required>
+                    <label for="vehicleMake">Make:</label>
+                    <input type="text" id="vehicleMake" name="vehicleMake" required>
                 </div>
                 <div class="form-group">
-                    <label for="carModel">Model:</label>
-                    <input type="text" id="carModel" name="carModel" required>
+                    <label for="vehicleModel">Model:</label>
+                    <input type="text" id="vehicleModel" name="vehicleModel" required>
                 </div>
             </div>
             <div class="form-row">
@@ -191,8 +207,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="visitReason">Reason for Visit:</label>
-                <textarea id="visitReason" name="visitReason" rows="4" required></textarea>
+                <label for="reasonForVisit">Reason for Visit:</label>
+                <textarea id="reasonForVisit" name="reasonForVisit" rows="4" required></textarea>
             </div>
             <button type="submit">Submit</button>
         </form>
@@ -200,6 +216,5 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14016.255005049969!2d-81.8047356!3d28.5678483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e78d14f186d9ef%3A0x8563144ee36d7f5e!2sCentral%20Florida%20Import%20Specialists!5e0!3m2!1sen!2sus!4v1718292991386!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 </section>
-<script src="js/app.js"></script>
 </body>
 </html>
